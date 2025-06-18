@@ -1,5 +1,6 @@
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, Button, IconButton, Toolbar, Typography } from "@mui/material"
 
+const pages = ['home', 'character sheet', 'Blog'];
 export const Navbar = () => {
     return (
         <AppBar position="static" sx={{ backgroundColor: '#3C4142'}}>
@@ -28,6 +29,13 @@ export const Navbar = () => {
                 >
                     abyssium
                 </Typography>
+                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    {pages.map((page) => (
+                        <Button key={page} sx={{ my: 2, color: 'white', display: 'block' }}>
+                            {page}
+                        </Button>
+                    ))}
+                </Box>
             </Toolbar>
         </AppBar>
     )
