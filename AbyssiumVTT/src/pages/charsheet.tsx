@@ -54,7 +54,8 @@ export const Charsheet = () =>  {
 
       {/* Character Info */}
       <CustomTabPanel value={value} index={0}>
-        <CharInfo />
+        {/* <CharInfo /> */}
+        Item One
       </CustomTabPanel>
 
       {/* Abilities and Score Modifier */}
