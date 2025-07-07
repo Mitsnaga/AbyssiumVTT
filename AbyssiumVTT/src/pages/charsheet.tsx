@@ -2,7 +2,7 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-/*import { CharInfo } from './charinfo';*/
+import { CharInfo } from './charinfo';
 
 
 interface Props {
@@ -54,8 +54,7 @@ export const Charsheet = () =>  {
 
       {/* Character Info */}
       <CustomTabPanel value={value} index={0}>
-        {/* <CharInfo /> */}
-        Item One
+        <CharInfo /> 
       </CustomTabPanel>
 
       {/* Abilities and Score Modifier */}
