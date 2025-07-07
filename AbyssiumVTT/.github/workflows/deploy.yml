@@ -32,4 +32,3 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "dist/*"
           target: "/var/www/vtt-frontend"
-
