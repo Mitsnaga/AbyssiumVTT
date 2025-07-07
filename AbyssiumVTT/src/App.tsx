@@ -1,6 +1,6 @@
 
 import { Navbar } from "./Components/navbar"
-import { Charsheet } from "./pages/charsheet"
+import LandingPage from "./pages/landingpage"
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
     <>
       <Navbar />
-      <Charsheet />
+      <LandingPage/>
     </>
 
   )
