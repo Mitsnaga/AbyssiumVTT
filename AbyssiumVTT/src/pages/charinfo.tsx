@@ -25,41 +25,65 @@ export const CharInfo: React.FC<CharInfoProps> = () => {
     return (
 
         <Grid container spacing={2} sx={{marginTop: 2, marginBottom: 2}} >
-            <Stack spacing={2} >
+            <Stack spacing={2}>
                 <Item>
                     <TextField 
                         label="Name"
                         aria-label='Name'
                         name='Name'
+                        value={state?.Name}
                         onChange={handleChange}
+                        sx={{minWidth: '700px'}}
                     />
                 </Item>
 
-                <Item>
-                    <TextField 
-                        label="Class"
-                        aria-label='Class'
-                        name='Class'
-                        onChange={handleChange}
-                    />
-                </Item>
- 
-                <Item>
-                    <TextField
-                        label="Level"
-                        aria-label='Level'
-                        name='Level'
-                        onChange={handleChange}
-                    />
-                </Item>
+      
+                    
+                    <Grid container spacing={2} sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', Width: '700px'}}>
+                        <Grid size="grow">
+                            <Item>
+                                <TextField 
+                                    label="Class"
+                                    aria-label='Class'
+                                    name='Class'
+                                    value={state?.Class}
+                                    onChange={handleChange}
+                                    sx={{ width: '100%' }}
+                    
+                                />
+                            </Item>
+                        </Grid>
+                        
+                        <Grid size={4}>
+                            <Item>
+                                <TextField
+                                    label="Level"
+                                    aria-label='Level'
+                                    name='Level'
+                                    value={state?.Level}
+                                    onChange={handleChange}
+                                    sx={{ width: '100%' }}
+                                    
+                                />
+                            </Item>
+                        </Grid>
+                    </Grid>
+
+
 
                 <Item>
                     <TextField
                         label="Background"
                         aria-label='Background'
                         name='Background'
+                        value={state?.Background}
                         onChange={handleChange}
+                        sx={{minWidth: '700px'}}
                     />
+                </Item>
+
+                <Item>
+                    {JSON.stringify(state)}
                 </Item>
             </Stack>            
         </Grid>
