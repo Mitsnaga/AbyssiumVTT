@@ -19,9 +19,11 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
+        working-directory: ./AbyssiumVTT
         run: npm install
 
       - name: Build app
+        working-directory: ./AbyssiumVTT
         run: npm run build
 
       - name: Copy files to VPS
@@ -30,6 +32,5 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "dist/*"
+          source: "AbyssiumVTT/dist/*"
           target: "/var/www/vtt-frontend"
-
