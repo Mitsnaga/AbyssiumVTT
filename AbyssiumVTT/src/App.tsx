@@ -1,6 +1,6 @@
 
+import { Outlet } from "react-router-dom"
 import { Navbar } from "./Components/navbar"
-import LandingPage from "./pages/landingpage"
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
     <>
       <Navbar />
-      <LandingPage/>
+      <Outlet />
     </>
 
   )
