@@ -16,18 +16,22 @@
     top: 0;
     height: 100%;
     width: 50%;
-    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* Sign In Container */
 .sign-in-container {
     left: 0;
     z-index: 2;
+    visibility: visible;
+    transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.5s linear 0s;
 }
 
 .sign-in-container.sign-up-mode {
     transform: translateX(100%);
     z-index: 1;
+    visibility: hidden;
+    transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.5s linear 0.38s;
 }
 
 /* Sign Up Container */
@@ -36,12 +40,16 @@
     opacity: 0;
     z-index: 1;
     transform: translateX(0);
+    visibility: hidden;
+    transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.5s linear 0.38s;
 }
 
 .sign-up-container.sign-up-mode {
     transform: translateX(100%);
     z-index: 5;
     opacity: 1;
+    visibility: visible;
+    transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.5s linear 0s;
 }
 
 /* Form Styles */
@@ -96,7 +104,7 @@
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: transform 80ms ease-in;
+    transition: transform 80ms  ease-in;
     cursor: pointer;
     margin: 10px 0;
 }
@@ -141,7 +149,7 @@
     width: 50%;
     height: 100%;
     overflow: hidden;
-    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 100;
 }
 
@@ -161,7 +169,7 @@
     height: 100%;
     width: 200%;
     transform: translateX(0);
-    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .overlay.sign-up-mode {
@@ -181,7 +189,7 @@
     height: 100%;
     width: 40%;
     transform: translateX(0);
-    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .overlay-panel h1 {
