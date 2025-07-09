@@ -1,0 +1,225 @@
+/* Authentication Container */
+.auth-container {
+    width: 768px;
+    height: 480px;
+    margin: 80px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Form Container Base */
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Sign In Container */
+.sign-in-container {
+    left: 0;
+    z-index: 2;
+}
+
+.sign-in-container.sign-up-mode {
+    transform: translateX(100%);
+    z-index: 1;
+}
+
+/* Sign Up Container */
+.sign-up-container {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(0);
+}
+
+.sign-up-container.sign-up-mode {
+    transform: translateX(100%);
+    z-index: 5;
+    opacity: 1;
+}
+
+/* Form Styles */
+.auth-form {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.auth-form h1 {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.auth-form input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.auth-form a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles */
+.auth-button {
+    border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background: linear-gradient(45deg, #FF4B2B, #FF416C);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.auth-button:hover {
+    transform: scale(0.95);
+}
+
+.auth-button:active {
+    transform: scale(0.95);
+}
+
+.ghost-button {
+    background-color: transparent;
+    border-color: white;
+    border: 1px solid white;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.ghost-button:hover {
+    transform: scale(0.95);
+}
+
+.ghost-button:active {
+    transform: scale(0.95);
+}
+
+/* Overlay Container */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 100;
+}
+
+.overlay-container.sign-up-mode {
+    transform: translateX(-100%);
+}
+
+/* Overlay */
+.overlay {
+    background: linear-gradient(45deg, #FF4B2B, #FF416C);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: white;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.overlay.sign-up-mode {
+    transform: translateX(50%);
+}
+
+/* Overlay Panel */
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    transform: translateX(0);
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.overlay-panel h1 {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.overlay-panel p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+/* Overlay Left Panel */
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.overlay-left.sign-up-mode {
+    transform: translateX(0);
+}
+
+/* Overlay Right Panel */
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.overlay-right.sign-up-mode {
+    transform: translateX(20%);
+}
+
+/* Error Styles */
+.error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 10px;
+}
