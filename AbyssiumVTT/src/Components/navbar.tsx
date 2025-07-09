@@ -29,8 +29,9 @@ export const Navbar = () => {
                 >
                     abyssium
                 </Typography>
-                <Button color="inherit"> Character info</Button>
-                <Button color="inherit" component={Link} to="/charsheet"> Character Sheet</Button>
+                <Button color="inherit">Character info</Button>
+                <Button color="inherit" component={Link} to="/charsheet">Character Sheet</Button>
+                <Button color="inherit" component={Link} to="/authentication">Login / Signup</Button>
             </Toolbar>
         </AppBar>
     )
